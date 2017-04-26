@@ -1,0 +1,12 @@
+concept,concept_type,name,description,domain
+country,entity_domain,Country,,geo
+world_region,entity_domain,World region,,geo
+population,measure,Population,,
+gdp_per_capita,measure,Income per Person,,
+life_expectancy,measure,Life Expectancy,,
+name,string,,,
+year,time,Year,,
+geo,entity_domain,Geographic place,,
+description,string,,,
+domain,string,,,
+shape_lores_svg,string,,,

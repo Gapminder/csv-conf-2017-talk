@@ -1,0 +1,274 @@
+country,name,is--country,world_region
+abkh,Abkhazia,TRUE,europe
+afg,Afghanistan,TRUE,asia
+akr_a_dhe,Akrotiri and Dhekelia,TRUE,europe
+ala,Åland,TRUE,europe
+alb,Albania,TRUE,europe
+dza,Algeria,TRUE,africa
+asm,American Samoa,TRUE,asia
+and,Andorra,TRUE,europe
+ago,Angola,TRUE,africa
+aia,Anguilla,TRUE,americas
+ata,Antarctica,TRUE,europe
+atg,Antigua and Barbuda,TRUE,americas
+arg,Argentina,TRUE,americas
+arm,Armenia,TRUE,europe
+abw,Aruba,TRUE,americas
+aus,Australia,TRUE,asia
+aut,Austria,TRUE,europe
+aze,Azerbaijan,TRUE,europe
+bhs,Bahamas,TRUE,americas
+bhr,Bahrain,TRUE,asia
+bgd,Bangladesh,TRUE,asia
+brb,Barbados,TRUE,americas
+blr,Belarus,TRUE,europe
+bel,Belgium,TRUE,europe
+blz,Belize,TRUE,americas
+ben,Benin,TRUE,africa
+bmu,Bermuda,TRUE,americas
+btn,Bhutan,TRUE,asia
+bol,Bolivia,TRUE,americas
+bih,Bosnia and Herzegovina,TRUE,europe
+bwa,Botswana,TRUE,africa
+bouisl,Bouvet Island,TRUE,africa
+bra,Brazil,TRUE,americas
+iot,British Indian Ocean Territory,TRUE,asia
+vgb,British Virgin Islands,TRUE,americas
+brn,Brunei,TRUE,asia
+bgr,Bulgaria,TRUE,europe
+bfa,Burkina Faso,TRUE,africa
+bdi,Burundi,TRUE,africa
+khm,Cambodia,TRUE,asia
+cmr,Cameroon,TRUE,africa
+can,Canada,TRUE,americas
+cpv,Cape Verde,TRUE,africa
+cym,Cayman Islands,TRUE,americas
+caf,Central African Republic,TRUE,africa
+tcd,Chad,TRUE,africa
+chanisl,Channel Islands,TRUE,europe
+chl,Chile,TRUE,americas
+chn,China,TRUE,asia
+cxr,Christmas Island,TRUE,asia
+fra_clipperton,Clipperton,TRUE,
+cck,Cocos Island,TRUE,asia
+col,Colombia,TRUE,americas
+com,Comoros,TRUE,africa
+cod,"Congo, Dem. Rep.",TRUE,africa
+cog,"Congo, Rep.",TRUE,africa
+cok,Cook Is,TRUE,asia
+cri,Costa Rica,TRUE,americas
+civ,Cote d'Ivoire,TRUE,africa
+hrv,Croatia,TRUE,europe
+cub,Cuba,TRUE,americas
+nld_curacao,Curaçao,TRUE,americas
+cyp,Cyprus,TRUE,europe
+cze,Czech Republic,TRUE,europe
+cheslo,Czechoslovakia,TRUE,europe
+dnk,Denmark,TRUE,europe
+dji,Djibouti,TRUE,africa
+dma,Dominica,TRUE,americas
+dom,Dominican Republic,TRUE,americas
+deu_east,East Germany,TRUE,europe
+ecu,Ecuador,TRUE,americas
+egy,Egypt,TRUE,africa
+slv,El Salvador,TRUE,americas
+gnq,Equatorial Guinea,TRUE,africa
+eri,Eritrea,TRUE,africa
+eri_a_eth,Eritrea and Ethiopia,TRUE,africa
+est,Estonia,TRUE,europe
+eth,Ethiopia,TRUE,africa
+fro,Faeroe Islands,TRUE,europe
+flk,Falkland Is (Malvinas),TRUE,americas
+fji,Fiji,TRUE,asia
+fin,Finland,TRUE,europe
+fra,France,TRUE,europe
+guf,French Guiana,TRUE,americas
+pyf,French Polynesia,TRUE,asia
+fra_antarc,French Southern and Antarctic Lands,TRUE,
+gab,Gabon,TRUE,africa
+gmb,Gambia,TRUE,africa
+pse_gaza,Gaza Strip,TRUE,asia
+geo,Georgia,TRUE,europe
+deu,Germany,TRUE,europe
+gha,Ghana,TRUE,africa
+gib,Gibraltar,TRUE,europe
+grc,Greece,TRUE,europe
+grl,Greenland,TRUE,europe
+grd,Grenada,TRUE,americas
+glp,Guadeloupe,TRUE,americas
+gum,Guam,TRUE,asia
+gtm,Guatemala,TRUE,americas
+gbg,Guernsey,TRUE,europe
+gin,Guinea,TRUE,africa
+gnb,Guinea-Bissau,TRUE,africa
+guy,Guyana,TRUE,americas
+hti,Haiti,TRUE,americas
+heard_a_mcd,Heard and McDonald Islands,TRUE,asia
+hos,Holy See,TRUE,europe
+hnd,Honduras,TRUE,americas
+hkg,"Hong Kong, China",TRUE,asia
+hun,Hungary,TRUE,europe
+isl,Iceland,TRUE,europe
+ind,India,TRUE,asia
+idn,Indonesia,TRUE,asia
+irn,Iran,TRUE,asia
+irq,Iraq,TRUE,asia
+irl,Ireland,TRUE,europe
+gbm,Isle of Man,TRUE,europe
+isr,Israel,TRUE,asia
+ita,Italy,TRUE,europe
+jam,Jamaica,TRUE,americas
+jpn,Japan,TRUE,asia
+jey,Jersey,TRUE,europe
+jor,Jordan,TRUE,asia
+kaz,Kazakhstan,TRUE,asia
+ken,Kenya,TRUE,africa
+kir,Kiribati,TRUE,asia
+kos,Kosovo,TRUE,europe
+kwt,Kuwait,TRUE,asia
+kgz,Kyrgyz Republic,TRUE,asia
+lao,Lao,TRUE,asia
+lva,Latvia,TRUE,europe
+lbn,Lebanon,TRUE,asia
+lso,Lesotho,TRUE,africa
+lbr,Liberia,TRUE,africa
+lby,Libya,TRUE,africa
+lie,Liechtenstein,TRUE,europe
+ltu,Lithuania,TRUE,europe
+lux,Luxembourg,TRUE,europe
+mac,"Macao, China",TRUE,asia
+mkd,"Macedonia, FYR",TRUE,europe
+mdg,Madagascar,TRUE,africa
+mwi,Malawi,TRUE,africa
+mys,Malaysia,TRUE,asia
+mdv,Maldives,TRUE,asia
+mli,Mali,TRUE,africa
+mlt,Malta,TRUE,europe
+mhl,Marshall Islands,TRUE,asia
+mtq,Martinique,TRUE,americas
+mrt,Mauritania,TRUE,africa
+mus,Mauritius,TRUE,africa
+myt,Mayotte,TRUE,africa
+mex,Mexico,TRUE,americas
+fsm,"Micronesia, Fed. Sts.",TRUE,asia
+mda,Moldova,TRUE,europe
+mco,Monaco,TRUE,europe
+mng,Mongolia,TRUE,asia
+mne,Montenegro,TRUE,europe
+msr,Montserrat,TRUE,americas
+mar,Morocco,TRUE,africa
+moz,Mozambique,TRUE,africa
+mmr,Myanmar,TRUE,asia
+nam,Namibia,TRUE,africa
+nru,Nauru,TRUE,asia
+npl,Nepal,TRUE,asia
+nld,Netherlands,TRUE,europe
+ant,Netherlands Antilles,TRUE,americas
+ncl,New Caledonia,TRUE,asia
+nzl,New Zealand,TRUE,asia
+ngokar,Ngorno-Karabakh,TRUE,europe
+nic,Nicaragua,TRUE,americas
+ner,Niger,TRUE,africa
+nga,Nigeria,TRUE,africa
+niu,Niue,TRUE,asia
+nfk,Norfolk Island,TRUE,asia
+prk,North Korea,TRUE,asia
+yem_north,North Yemen (former),TRUE,asia
+cyp_nor,Northern Cyprus,TRUE,europe
+mnp,Northern Mariana Islands,TRUE,asia
+nor,Norway,TRUE,europe
+omn,Oman,TRUE,asia
+pak,Pakistan,TRUE,asia
+plw,Palau,TRUE,asia
+pse,Palestine,TRUE,asia
+pan,Panama,TRUE,americas
+png,Papua New Guinea,TRUE,asia
+pry,Paraguay,TRUE,americas
+per,Peru,TRUE,americas
+phl,Philippines,TRUE,asia
+pcn,Pitcairn,TRUE,asia
+pol,Poland,TRUE,europe
+prt,Portugal,TRUE,europe
+pri,Puerto Rico,TRUE,americas
+qat,Qatar,TRUE,asia
+reu,Reunion,TRUE,africa
+rou,Romania,TRUE,europe
+rus,Russia,TRUE,europe
+rwa,Rwanda,TRUE,africa
+wsm,Samoa,TRUE,asia
+smr,San Marino,TRUE,europe
+stp,Sao Tome and Principe,TRUE,africa
+sau,Saudi Arabia,TRUE,asia
+sen,Senegal,TRUE,africa
+srb,Serbia,TRUE,europe
+scg,Serbia and Montenegro,TRUE,europe
+scg_ex_kos,Serbia excluding Kosovo,TRUE,europe
+syc,Seychelles,TRUE,africa
+sle,Sierra Leone,TRUE,africa
+sgp,Singapore,TRUE,asia
+sxm,Sint Maarten (Dutch part),TRUE,americas
+svk,Slovak Republic,TRUE,europe
+svn,Slovenia,TRUE,europe
+slb,Solomon Islands,TRUE,asia
+som,Somalia,TRUE,africa
+som_somland,Somaliland,TRUE,africa
+zaf,South Africa,TRUE,africa
+sgero_a_ssandw,South Georgia and the South Sandwich Islands,TRUE,americas
+kor,South Korea,TRUE,asia
+sosset,South Ossetia,TRUE,europe
+ssd,South Sudan,TRUE,africa
+yem_south,South Yemen (former),TRUE,asia
+esp,Spain,TRUE,europe
+lka,Sri Lanka,TRUE,asia
+stbar,St. Barthélemy,TRUE,americas
+shn,St. Helena,TRUE,africa
+kna,St. Kitts and Nevis,TRUE,americas
+lca,St. Lucia,TRUE,americas
+stmar,St. Martin,TRUE,americas
+maf,St. Martin (French part),TRUE,americas
+vct,St. Vincent and the Grenadines,TRUE,americas
+spm,St.-Pierre-et-Miquelon,TRUE,americas
+sdn,Sudan,TRUE,africa
+sur,Suriname,TRUE,americas
+sjm,Svalbard,TRUE,europe
+swz,Swaziland,TRUE,africa
+swe,Sweden,TRUE,europe
+che,Switzerland,TRUE,europe
+syr,Syria,TRUE,asia
+twn,Taiwan,TRUE,asia
+tjk,Tajikistan,TRUE,asia
+tza,Tanzania,TRUE,africa
+tha,Thailand,TRUE,asia
+tls,Timor-Leste,TRUE,asia
+tgo,Togo,TRUE,africa
+tkl,Tokelau,TRUE,asia
+ton,Tonga,TRUE,asia
+transn,Transnistria,TRUE,europe
+tto,Trinidad and Tobago,TRUE,americas
+tun,Tunisia,TRUE,africa
+tur,Turkey,TRUE,europe
+tkm,Turkmenistan,TRUE,asia
+tca,Turks and Caicos Islands,TRUE,americas
+tuv,Tuvalu,TRUE,asia
+uga,Uganda,TRUE,africa
+ukr,Ukraine,TRUE,europe
+are,United Arab Emirates,TRUE,asia
+gbr,United Kingdom,TRUE,europe
+korea_union,United Korea (former),TRUE,asia
+usa,United States,TRUE,americas
+ury,Uruguay,TRUE,americas
+usa_minor_out_isl,US Minor Outlying Islands,TRUE,americas
+ussr,USSR,TRUE,europe
+uzb,Uzbekistan,TRUE,asia
+vut,Vanuatu,TRUE,asia
+ven,Venezuela,TRUE,americas
+vnm,Vietnam,TRUE,asia
+vir,Virgin Islands (U.S.),TRUE,americas
+wlf,Wallis et Futuna,TRUE,asia
+pse_west_bank,West Bank,TRUE,asia
+deu_west,West Germany,TRUE,europe
+esh,Western Sahara,TRUE,africa
+yem,Yemen,TRUE,asia
+yug,Yugoslavia,TRUE,europe
+zmb,Zambia,TRUE,africa
+zwe,Zimbabwe,TRUE,africa
