@@ -62,6 +62,69 @@
             }
         },
         {
+            "path": "ddf--datapoints--gdp_per_capita--by--geo--time.csv",
+            "name": "ddf--datapoints--gdp_per_capita--by--geo--time",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "gdp_per_capita"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "path": "ddf--datapoints--life_expectancy--by--geo--time.csv",
+            "name": "ddf--datapoints--life_expectancy--by--geo--time",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "life_expectancy"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
+            "path": "ddf--datapoints--population--by--geo--time.csv",
+            "name": "ddf--datapoints--population--by--geo--time",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "population"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "path": "ddf--datapoints--20120905_extreme_poverty_percent_people_below_125_a_day--by--geo--time.csv",
             "name": "ddf--datapoints--20120905_extreme_poverty_percent_people_below_125_a_day--by--geo--time",
             "schema": {

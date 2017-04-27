@@ -96,50 +96,6 @@
                 <section>
                 <div class="demospace">
                 <div class="tables">
-
-                <div id="concepts" class="fragment" data-fragment-index="4" style="display: none;">
-                    <h2 style="text-align: left">Concepts</h2>
-                    <table class="tg">
-                    <tr>
-                        <th class="tg-y2tu">concept</th>
-                        <th class="tg-9hbo">concept_type</th>
-                        <th class="tg-9hbo">name</th>
-                        <th class="tg-9hbo">description</th>
-                      </tr>
-                      <tr>
-                        <td class="tg-b7b8">country</td>
-                        <td class="tg-b7b8">entity_domain</td>
-                        <td class="tg-b7b8">Country</td>
-                        <td class="tg-b7b8"></td>
-                      </tr>
-                      <tr>
-                        <td class="tg-yw4l">year</td>
-                        <td class="tg-yw4l">time</td>
-                        <td class="tg-yw4l">Year</td>
-                        <td class="tg-yw4l">Calendar year</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-b7b8">population</td>
-                        <td class="tg-b7b8">measure</td>
-                        <td class="tg-b7b8">Population</td>
-                        <td class="tg-b7b8">Balbalbala</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-yw4l">gdp_per_capita</td>
-                        <td class="tg-yw4l">measure</td>
-                        <td class="tg-yw4l">Income per person</td>
-                        <td class="tg-yw4l">Gross Domestic Product per person ...</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
-                      </tr>
-                    </table>
-                </div>
-                <div id="entities">
-                    <div  class="fragment" data-fragment-index="2" style="display: none;">
                     <h2 style="text-align: left">Entities</h2>
                     <table class="tg">
                     <tr>
@@ -177,9 +133,8 @@
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
                       </tr>
-                    </table>
-                    </div>
-                    <table class="tg fragment" data-fragment-index="3" style="display: none;">
+                    </table><br><br>
+                    <table class="tg fragment" id="region_entities">
                     <tr>
                         <th class="tg-y2tu">world_region</th>
                         <th class="tg-9hbo">name</th>
@@ -208,46 +163,47 @@
                     </table>
 
                 </div>
-                <div id="datapoints">
-                <h2 style="text-align: left">Datapoints</h2>
+
+                 <div id="vizabi_entities" class="vizabi"></div>
+                </div>
+                </section>
+                <section>
+
+                <div class="demospace">
+                <div class="tables">
+                    <h2 style="text-align: left">Concepts</h2>
                     <table class="tg">
                     <tr>
-                        <th class="tg-y2tu">country</th>
-                        <th class="tg-y2tu">year</th>
-                        <th class="tg-9hbo">population</th>
-                        <th class="tg-9hbo">life_expectancy</th>
-                        <th class="tg-9hbo">gdp_per_capita</th>
+                        <th class="tg-y2tu">concept</th>
+                        <th class="tg-9hbo">scales</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">description</th>
                       </tr>
                       <tr>
-                        <td class="tg-b7b8">swe</td>
-                        <td class="tg-b7b8">2015</td>
-                        <td class="tg-b7b8">385</td>
-                        <td class="tg-b7b8">85</td>
-                        <td class="tg-b7b8">3858575</td>
+                        <td class="tg-b7b8">country</td>
+                        <td class="tg-b7b8"></td>
+                        <td class="tg-b7b8">Country</td>
+                        <td class="tg-b7b8"></td>
                       </tr>
                       <tr>
-                        <td class="tg-yw4l">usa</td>
-                        <td class="tg-yw4l">2015</td>
-                        <td class="tg-yw4l">583</td>
-                        <td class="tg-yw4l">75</td>
-                        <td class="tg-yw4l">385839</td>
+                        <td class="tg-yw4l">year</td>
+                        <td class="tg-yw4l">["time"]</td>
+                        <td class="tg-yw4l">Year</td>
+                        <td class="tg-yw4l">Calendar year</td>
                       </tr>
                       <tr>
-                        <td class="tg-b7b8">ger</td>
-                        <td class="tg-b7b8">2015</td>
-                        <td class="tg-b7b8">484</td>
-                        <td class="tg-b7b8">84</td>
-                        <td class="tg-b7b8">5894</td>
+                        <td class="tg-b7b8">life_expectancy</td>
+                        <td class="tg-b7b8">["linear"]</td>
+                        <td class="tg-b7b8">Life expectancy</td>
+                        <td class="tg-b7b8">Expected length of life ...</td>
                       </tr>
                       <tr>
-                        <td class="tg-yw4l">swe</td>
-                        <td class="tg-yw4l">2014</td>
-                        <td class="tg-yw4l">200</td>
-                        <td class="tg-yw4l">85</td>
-                        <td class="tg-yw4l">4839595</td>
+                        <td class="tg-yw4l">gdp_per_capita</td>
+                        <td class="tg-yw4l">["log","linear"]</td>
+                        <td class="tg-yw4l">Income per person</td>
+                        <td class="tg-yw4l">Gross Domestic Product per person ...</td>
                       </tr>
                       <tr>
-                        <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
@@ -255,12 +211,11 @@
                       </tr>
                     </table>
                 </div>
+
+                 <div id="vizabi_concepts" class="vizabi"></div>
                 </div>
-                 <div id="vizabi_entities" class="vizabi"></div>
-                </div>
+
                 </section>
-                <section><h4>Basic DDF</h4><h2>Entities: List of all possible values</h2></section>
-                <section><h4>Basic DDF</h4><h2>Concepts: List of all headers in the dataset</h2></section>
                 <section><h2>Basic DDF</h2></section>
                 <section><h2>Entity sets: one entity, multiple sets</h2></section>
                 <section><h2>Multi-dimensionality</h2></section>
@@ -276,6 +231,7 @@
         <script src="lib/vizabi/vizabi.min.js"></script>
         <script src="lib/vizabi/bubblechart.js"></script>
         <script src="lib/vizabi/vizabi-ddfcsv-reader.js"></script>
+        <script src="lib/vizabi/gap_sg_state.js"></script>
 
         <script>
 
@@ -288,113 +244,34 @@
                 },
             });
             
-/*
-            Vizabi('BubbleChart', document.getElementById('vizabi_entities'),{
+            var entpropstate = Vizabi.utils.deepClone(gap_sg_state);
+            entpropstate.marker.axis_x.scaleType = 'linear';
+            entpropstate.marker.axis_x.which = 'gdp_per_capita';
+            entpropstate.marker.axis_y.which = 'life_expectancy';
+            entpropstate.marker.size.which = 'population';
+            entpropstate.marker_colorlegend.hook_geoshape.which = 'foo';
+            entpropstate.marker_colorlegend.label.which = 'geo';
+            var entViz = Vizabi('BubbleChart', document.getElementById('vizabi_entities'),{
                 data: {
                     path: 'data/presentation_set/',
                     reader: 'ddf'
                 },
+                state: entpropstate
+            })
 
-  "state": {
-    "entities": {
-      "dim": "geo",
-      "show": {
-        "is--country": true
-      }      
-    },
-    "entities_colorlegend": {
-      "dim": "world_4region"
-    },
-    "entities_tags": {
-      "dim": "tag"
-    },
-    "time": {
-      "startOrigin": "1800",
-      "endOrigin": "2015",
-      "value": "2015",
-      "dim": "time"
-    },
-    "marker": {
-      "space": ["entities", "time"],
-      "label": {
-        "use": "property",
-        "which": "name"
-      },
-      "axis_y": {
-        "use": "indicator",
-        "which": "life_expectancy_years",
-        "zoomedMin": 19,
-        "zoomedMax": 86,
-        "domainMin": 0,
-        "domainMax": 100
-      },
-      "axis_x": {
-        "use": "indicator",
-        "scaleType": "log",
-        "domainMax": 150000,
-        "domainMin": 300,
-        "zoomedMax": 150000,
-        "zoomedMin": 300,
-        "which": "income_per_person_gdppercapita_ppp_inflation_adjusted"
-      },
-      "size": {
-        "use": "indicator",
-        "which": "population_total",
-        "domainMin": 15,
-        "domainMax": 1400000000,
-        "scaleType": "linear",
-        "allow": {
-          "scales": ["linear"]
-        }
-      },
-      "color": {
-        "use": "property",
-        "which": "world_4region",
-        "scaleType": "ordinal",
-        "syncModels": ["marker_colorlegend"]
-      }
-    },
-    "marker_colorlegend":{
-      "space": ["entities_colorlegend"],
-      "opacityRegular": 0.8,
-      "opacityHighlightDim": 0.3,
-      "label": {
-        "use": "property",
-        "which": "name"
-      },
-      "hook_rank": {
-        "use": "property",
-        "which": "rank"
-      },
-      "hook_geoshape": {
-        "use": "property",
-        "which": "shape_lores_svg"
-      }
-    },
-    "marker_tags": {
-      "space": ["entities_tags"],
-      "label": {
-        "use": "property",
-        "which": "name"
-      },
-      "hook_parent": {
-        "use": "property",
-        "which": "parent"
-      }
-    }
-  },
-  "ui": {
-    "datawarning": {
-      "doubtDomain": [1800, 1950, 2015],
-      "doubtRange": [1.0, 0.3, 0.2]
-    },
-    "splash": true
-  }
-            })*/
+            Vizabi('BubbleChart', document.getElementById('vizabi_concepts'),{
+                data: {
+                    path: 'data/presentation_set/',
+                    reader: 'ddf'
+                },
+                state: gap_sg_state
+            })
+
             // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
                 history: true,
                 width: "1920",
+                transition: "fade",
                 height: "1080",
 
                 // More info https://github.com/hakimel/reveal.js#dependencies
@@ -405,13 +282,27 @@
                     { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
                 ]
             });
-            Reveal.addEventListener('fragmentshown', function(a, b) { 
-                console.log(a);
-                $(a.fragment).slideDown();
-                if (a.fragment.id == "concepts")
-                    $("#entities").css('transform','scale(0.5,0.5)');
-                if (a.fragment.parentNode.id == "entities")
-                    $("#datapoints").css('transform','scale(0.5,0.5)');
+            Reveal.addEventListener('fragmentshown', function(a) {
+
+                if (a.fragment.id == "region_entities") {
+                    entViz.setModel({
+                        state: { marker_colorlegend: {
+                            hook_geoshape: { which: 'shape_lores_svg' },
+                            label: { which: 'name' }
+                        }  }
+                    })
+                }
+            });
+            Reveal.addEventListener('fragmenthidden', function(a) {
+
+                if (a.fragment.id == "region_entities") {
+                    entViz.setModel({
+                        state: { marker_colorlegend: {
+                            hook_geoshape: { which: 'foo' },
+                            label: { which: 'geo' }
+                        }  }
+                    })
+                }
             });
         </script>
     </body>
