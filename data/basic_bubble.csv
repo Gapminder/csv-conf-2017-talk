@@ -1,4 +1,4 @@
-Country,time,Life expectancy,GDP per capita,Population
+country,time,life_expectancy,gdp_per_capita,population
 afg,1800,28.21,603,3280000
 alb,1800,35.4,667,410445
 dza,1800,28.82,716,2503218

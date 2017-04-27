@@ -97,7 +97,50 @@
                 <div class="demospace">
                 <div class="tables">
 
-                <h2 style="text-align: left">Entities</h2>
+                <div id="concepts" class="fragment" data-fragment-index="4" style="display: none;">
+                    <h2 style="text-align: left">Concepts</h2>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">concept</th>
+                        <th class="tg-9hbo">concept_type</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">description</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">country</td>
+                        <td class="tg-b7b8">entity_domain</td>
+                        <td class="tg-b7b8">Country</td>
+                        <td class="tg-b7b8"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">year</td>
+                        <td class="tg-yw4l">time</td>
+                        <td class="tg-yw4l">Year</td>
+                        <td class="tg-yw4l">Calendar year</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">population</td>
+                        <td class="tg-b7b8">measure</td>
+                        <td class="tg-b7b8">Population</td>
+                        <td class="tg-b7b8">Balbalbala</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">gdp_per_capita</td>
+                        <td class="tg-yw4l">measure</td>
+                        <td class="tg-yw4l">Income per person</td>
+                        <td class="tg-yw4l">Gross Domestic Product per person ...</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                      </tr>
+                    </table>
+                </div>
+                <div id="entities">
+                    <div  class="fragment" data-fragment-index="2" style="display: none;">
+                    <h2 style="text-align: left">Entities</h2>
                     <table class="tg">
                     <tr>
                         <th class="tg-y2tu">country</th>
@@ -135,9 +178,8 @@
                         <td class="tg-b7b8">...</td>
                       </tr>
                     </table>
-                    <br><br>
-
-                    <table class="tg">
+                    </div>
+                    <table class="tg fragment" data-fragment-index="3" style="display: none;">
                     <tr>
                         <th class="tg-y2tu">world_region</th>
                         <th class="tg-9hbo">name</th>
@@ -164,8 +206,11 @@
                         <td class="tg-yw4l">{ ... }</td>
                       </tr>
                     </table>
-                <h5 style="text-align: left">Datapoints</h2>
-                    <table class="tg small">
+
+                </div>
+                <div id="datapoints">
+                <h2 style="text-align: left">Datapoints</h2>
+                    <table class="tg">
                     <tr>
                         <th class="tg-y2tu">country</th>
                         <th class="tg-y2tu">year</th>
@@ -210,6 +255,7 @@
                       </tr>
                     </table>
                 </div>
+                </div>
                  <div id="vizabi_entities" class="vizabi"></div>
                 </div>
                 </section>
@@ -226,6 +272,7 @@
         <script src="lib/js/head.min.js"></script>
         <script src="lib/d3.min.js"></script>
         <script src="js/reveal.js"></script>
+        <script src="lib/jquery-3.1.1.min.js"></script>
         <script src="lib/vizabi/vizabi.min.js"></script>
         <script src="lib/vizabi/bubblechart.js"></script>
         <script src="lib/vizabi/vizabi-ddfcsv-reader.js"></script>
@@ -234,17 +281,17 @@
 
             var ddfcsvReader = new DDFCsvReader.getDDFCsvReaderObject()
             Vizabi.Reader.extend("ddf", ddfcsvReader);
-            
+
             Vizabi('BubbleChart', document.getElementById('vizabi'),{
                 data: {
                     path: 'data/basic_bubble.csv'
                 },
             });
             
-
+/*
             Vizabi('BubbleChart', document.getElementById('vizabi_entities'),{
                 data: {
-                    path: 'https://raw.githubusercontent.com/open-numbers/ddf--gapminder--systema_globalis/master/',
+                    path: 'data/presentation_set/',
                     reader: 'ddf'
                 },
 
@@ -343,7 +390,7 @@
     },
     "splash": true
   }
-            })
+            })*/
             // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
                 history: true,
@@ -357,6 +404,14 @@
                     { src: 'plugin/notes/notes.js', async: true },
                     { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
                 ]
+            });
+            Reveal.addEventListener('fragmentshown', function(a, b) { 
+                console.log(a);
+                $(a.fragment).slideDown();
+                if (a.fragment.id == "concepts")
+                    $("#entities").css('transform','scale(0.5,0.5)');
+                if (a.fragment.parentNode.id == "entities")
+                    $("#datapoints").css('transform','scale(0.5,0.5)');
             });
         </script>
     </body>
