@@ -9092,6 +9092,27 @@
             }
         },
         {
+            "path": "ddf--datapoints--population_total--by--world_4region--time.csv",
+            "name": "ddf--datapoints--population_total--by--world_4region--time",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "world_4region"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "population_total"
+                    }
+                ],
+                "primaryKey": [
+                    "world_4region",
+                    "time"
+                ]
+            }
+        },
+        {
             "path": "ddf--datapoints--poverty_percent_people_below_310_a_day--by--geo--time.csv",
             "name": "ddf--datapoints--poverty_percent_people_below_310_a_day--by--geo--time",
             "schema": {
@@ -11732,6 +11753,12 @@
                     },
                     {
                         "name": "shape_lores_svg"
+                    },
+                    {
+                        "name": "latitude"
+                    },
+                    {
+                        "name": "longitude"
                     }
                 ],
                 "primaryKey": "geo"
