@@ -1,0 +1,180 @@
+* {
+box-sizing: border-box;
+font-family: "Source Sans Pro", Helvetica, sans-serif;
+font-size: 22px;
+  
+}
+
+@font-face {
+  font-family: 'geoslab703_md_bt_medium';
+  src: url('../assets/fonts/geoslab703_md_bt_medium.woff2') format('woff2'),
+       url('../assets/fonts/geoslab703_md_bt_medium.woff') format('woff'),
+       url('../assets/fonts/geoslab703_md_bt_medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'geo703mi';
+  src: url('../assets/fonts/geo703mi.woff2') format('woff2'),
+       url('../assets/fonts/geo703mi.woff') format('woff'),
+       url('../assets/fonts/geo703mi.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'cargts';
+  src: url('../assets/fonts/cargts.woff2') format('woff2'),
+       url('../assets/fonts/cargts.woff') format('woff'),
+       url('../assets/fonts/cargts.ttf') format('truetype');
+}
+
+    
+#title{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 6vh;
+  font-family: 'geoslab703_md_bt_medium';
+  font-weight: bolder;
+}
+
+.migrationmap {
+  width: 100%;
+  height: 95%;
+}
+
+.migrationmap #migration-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.migrationmap #filters {
+  position: absolute;
+  bottom: 20px;
+}
+
+#municipality-group path {
+  fill: white;
+  stroke: black;
+  stroke-opacity: 0.2;
+  pointer-events: none;
+}
+
+#province-group path {
+  fill: white;
+  stroke: hsl(198, 80%, 95%);
+  stroke-width: 3%;
+  pointer-events: none;
+}
+
+#world-group path {
+  pointer-events: none;
+}
+
+#world-group path.interactive,
+#municipality-group path.interactive,
+#province-group path.interactive {
+  pointer-events: visible;
+  cursor: pointer; 
+}
+
+#municipality-group path.active {
+  fill: #f5e8bf;
+}
+#province-group path.active {
+  stroke: hsl(198, 80%, 70%);
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -100%;
+  }
+}
+
+.tooltip{
+  visibility: hidden;
+}
+
+.tooltip rect{
+  stroke: white;
+  stroke-width: 2px;
+  height: 10px;
+  position: absolute;
+}
+.tooltip text{
+  alignment-baseline: hanging;
+  font-size: 16px;
+}
+.tooltip text.line0{
+  font-size: 24px;
+}
+.tooltip text.line1{
+  text-anchor: end;
+}
+.tooltip text.shadow{
+  stroke: white;
+  stroke-width: 4px;
+  fill: white;
+  opacity: 0.7;
+}
+.tooltip .gain{
+  fill: #0E8865;
+}
+.tooltip .loss{
+  fill: #E2514D;
+}
+
+#migration-svg #arrows-layer .particles{
+  fill: none;
+  stroke-width: 4px;
+  stroke: url(#grad);
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.lines{
+  fill: none;
+  stroke-width: 1;
+  marker-end:url(#end-mark);
+  stroke: url(#grad);
+  pointer-events: none;
+}
+.linesshade{
+  fill: none;
+  stroke-width: 1;
+  marker-end:url(#end-mark-shade);
+  stroke: url(#gradshade);
+  pointer-events: none;
+}
+
+.filter .option:nth-child(2){
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.filter .option:last-child{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: 1px solid black;
+}
+
+.filter {
+  display: inline-block;
+  margin: 0px 10px;
+}
+.filter div {
+  margin-bottom: 10px;
+  color: #d1d1d1;
+}
+
+.filter .option {
+  padding: 5px;
+  cursor: pointer;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  pointer-events: visible;
+  background-color: #f5e8bf;
+}
+
+.filter .option:hover {
+}
+.filter .option.active {
+  background-color: #f9c242;
+  pointer-events: none;
+}

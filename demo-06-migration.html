@@ -1,0 +1,111 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
+  <script src="../lib/d3.v3.min.js"></script>
+  <link rel="stylesheet" href="../lib/migration-map.css">
+</head>
+
+<body onkeyup="parent.keyCode(event)"></body>
+<div id="title">Migration between provinces</div>  
+
+<script>
+//SETTINGS
+//specify data file
+var DATA_FILE = "../data/ddf--datapoints--flow--by--province_from--province_to--gender--popgroup--agegroup.csv";
+var PROPERTY_FILE = "../data/ddf--datapoints--flow-geo-proprties.csv";  
+//specify where the map is  
+var MAP_FILE = "../data/municipalities-blowup.svg";
+//specify how data column "from" looks like
+var FROM = "Province from";
+//specify how data column "to" looks like
+var TO = "Province to";
+//specify how the column width data looks like
+var FLOW = "Absolute flow";
+// exclude the following "from" OR "to" entries from the data
+var EXCLUDE = ["10", "98", "99"];
+var PARTICLES_SHOW_WHEN_LESS_LINES_THAN = 100;
+var PARTICLES_SHOW_FROM_START = true;
+  
+var MAX_ARROW_WIDTH = 10;
+  
+var FILTERS = {  
+  "Population group": {
+    "total": "All",
+    "1": "Black African",
+    "2": "Coloured",
+    "3": "Indian or Asian",
+    "4": "White"
+  },
+  "Sex": {
+    "total": "All",
+    "1": "Male",
+    "2": "Female"
+  },
+  "Age group": {
+    "total": "All",
+    "1": "Children 0-14",
+    "2": "Youth 15-34",
+    "3": "Adults 35-64",
+    "4": "Elderly 65+"
+  }
+};
+
+// if want to pre-filter stuff like "Indian Children" it would look like this:
+var UI_FILTERS = {
+//  "Population group": "3",
+//  "Sex": "total",
+//  "Age group": "1"
+};
+var domReadyCallback = function(callback){
+  d3.select("#world-group")
+    .style("visibility", "hidden")
+  
+  d3.select("#municipality-group").selectAll("path")
+    .style("opacity", 0)
+  
+  d3.select("#province-group").selectAll("path")
+    .style("stroke", "black")
+    .style("fill", "#f5e8bf")
+    .style("stroke-width", 1);
+  
+  if(callback) callback();
+};
+  
+var dataReadyCallback = function(callback){
+  setTimeout(function(){
+    d3.select("#province-group").selectAll("path")
+      .transition().duration(1000)
+      .attr("transform","translate(0,0)");
+    
+    setTimeout(function(){
+      d3.select("#municipality-group").selectAll("g")
+        .attr("transform","translate(0,0)");
+      
+      d3.select("#municipality-group").selectAll("path")
+        .transition().duration(1000)
+        .style("opacity", 1);
+      
+      setTimeout(function(){
+        d3.select("#province-group").selectAll("path")
+          .style("stroke", "hsl(198, 80%, 95%)")
+          .transition().duration(1000)
+          .style("fill", "white")
+          .style("stroke-width", "3%");
+          
+          setTimeout(function(){
+            if(callback) callback();
+          },1000)
+        
+      },1000)
+      
+    },1200) 
+    
+  },1000)
+  
+};
+  
+</script>
+
+<script src="../lib/migration-map.js"></script>
+</html>
