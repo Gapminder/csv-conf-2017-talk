@@ -216,10 +216,562 @@
                 </div>
 
                 </section>
-                <section><h2>Basic DDF</h2></section>
-                <section><h2>Entity sets: one entity, multiple sets</h2></section>
-                <section><h2>Multi-dimensionality</h2></section>
-                <section><h2>Translations</h2></section>
+                <section id="basic_ddf">
+                <div class="demospace">
+                <div class="tables">
+                    <h2 style="text-align: left">Datapoints</h2>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">country</th>
+                        <th class="tg-y2tu">year</th>
+                        <th class="tg-9hbo">population</th>
+                        <th class="tg-9hbo">life_expectancy</th>
+                        <th class="tg-9hbo">gdp_per_capita</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">2015</td>
+                        <td class="tg-b7b8">385</td>
+                        <td class="tg-b7b8">85</td>
+                        <td class="tg-b7b8">3858575</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">usa</td>
+                        <td class="tg-yw4l">2015</td>
+                        <td class="tg-yw4l">583</td>
+                        <td class="tg-yw4l">75</td>
+                        <td class="tg-yw4l">385839</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">ger</td>
+                        <td class="tg-b7b8">2015</td>
+                        <td class="tg-b7b8">484</td>
+                        <td class="tg-b7b8">84</td>
+                        <td class="tg-b7b8">5894</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">swe</td>
+                        <td class="tg-yw4l">2014</td>
+                        <td class="tg-yw4l">200</td>
+                        <td class="tg-yw4l">85</td>
+                        <td class="tg-yw4l">4839595</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                      </tr>
+                    </table>
+                    <br><br>
+
+                    <h2 style="text-align: left">Concepts</h2>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">concept</th>
+                        <th class="tg-9hbo">scales</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">description</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">country</td>
+                        <td class="tg-b7b8"></td>
+                        <td class="tg-b7b8">Country</td>
+                        <td class="tg-b7b8"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">year</td>
+                        <td class="tg-yw4l">["time"]</td>
+                        <td class="tg-yw4l">Year</td>
+                        <td class="tg-yw4l">Calendar year</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">life_expectancy</td>
+                        <td class="tg-b7b8">["linear"]</td>
+                        <td class="tg-b7b8">Life expectancy</td>
+                        <td class="tg-b7b8">Expected length<br> of life ...</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">gdp_per_capita</td>
+                        <td class="tg-yw4l">["log","linear"]</td>
+                        <td class="tg-yw4l">Income per person</td>
+                        <td class="tg-yw4l">Gross Domestic<br>Product per person ...</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                      </tr>
+                    </table>
+                </div>
+                <div class="tables">
+                    <h2 style="text-align: left">Entities</h2>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">country</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">world_region</th>
+                        <th class="tg-9hbo">latitude</th>
+                        <th class="tg-9hbo">longitude</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">Sweden</td>
+                        <td class="tg-b7b8">europe</td>
+                        <td class="tg-b7b8">385</td>
+                        <td class="tg-b7b8">85</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">usa</td>
+                        <td class="tg-yw4l">United&nbsp;States</td>
+                        <td class="tg-yw4l">americas</td>
+                        <td class="tg-yw4l">583</td>
+                        <td class="tg-yw4l">75</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">ger</td>
+                        <td class="tg-b7b8">Germany</td>
+                        <td class="tg-b7b8">europe</td>
+                        <td class="tg-b7b8">484</td>
+                        <td class="tg-b7b8">84</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                      </tr>
+                    </table><br><br>
+                    <table class="tg" id="region_entities">
+                    <tr>
+                        <th class="tg-y2tu">world_region</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">topojson</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">americas</td>
+                        <td class="tg-b7b8">The Americas</td>
+                        <td class="tg-b7b8">{ ... }</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">europe</td>
+                        <td class="tg-yw4l">Europe</td>
+                        <td class="tg-yw4l">{ ... }</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">asia</td>
+                        <td class="tg-b7b8">Asia</td>
+                        <td class="tg-b7b8">{ ... }</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">africa</td>
+                        <td class="tg-b7b8">Africa</td>
+                        <td class="tg-yw4l">{ ... }</td>
+                      </tr>
+                    </table>
+                </div>
+                </div>
+                    <h2>Basic DDF</h2>
+                </section>
+
+                <section><h1>Entity sets</h1></section>
+                <section>
+                <div class="demospace">
+                <div class="tables">
+                    <h2 style="text-align: left">Entity sets</h2>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">geo</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">is--country</th>
+                        <th class="tg-9hbo">is--un_state</th>
+                        <th class="tg-9hbo">is--city</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">Sweden</td>
+                        <td class="tg-b7b8">true</td>
+                        <td class="tg-b7b8">true</td>
+                        <td class="tg-b7b8">false</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">twn</td>
+                        <td class="tg-yw4l">Taiwan</td>
+                        <td class="tg-yw4l">true</td>
+                        <td class="tg-yw4l">false</td>
+                        <td class="tg-yw4l">false</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">sgp</td>
+                        <td class="tg-b7b8">Singapore</td>
+                        <td class="tg-b7b8">true</td>
+                        <td class="tg-b7b8">true</td>
+                        <td class="tg-b7b8">true</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">sth</td>
+                        <td class="tg-yw4l">Stockholm</td>
+                        <td class="tg-yw4l">false</td>
+                        <td class="tg-yw4l">false</td>
+                        <td class="tg-yw4l">true</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">pacific</td>
+                        <td class="tg-b7b8">Pacific Ocean</td>
+                        <td class="tg-b7b8">false</td>
+                        <td class="tg-b7b8">false</td>
+                        <td class="tg-b7b8">false</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                      </tr>
+                    </table><br><br>
+                    <h2> Concepts</h2>
+                    <table class="tg" id="region_entities">
+                    <tr>
+                        <th class="tg-y2tu">concept</th>
+                        <th class="tg-9hbo">concept_type</th>
+                        <th class="tg-9hbo">domain</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">geo</td>
+                        <td class="tg-b7b8">entity_domain</td>
+                        <td class="tg-b7b8"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">country</td>
+                        <td class="tg-yw4l">entity_set</td>
+                        <td class="tg-yw4l">geo</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">un_state</td>
+                        <td class="tg-b7b8">entity_set</td>
+                        <td class="tg-b7b8">geo</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">city</td>
+                        <td class="tg-yw4l">entity_set</td>
+                        <td class="tg-yw4l">geo</td>
+                      </tr>
+                    </table>
+                </div>
+                <div class="tables">
+                    <img src="assets/entity_set.svg" class="fragment">
+                </div>
+                </div>
+
+                <h2>Entity sets: one entity, multiple sets</h2></section>
+                <section>
+                <div class="demospace">
+                <div class="tables">
+                  <h2 style="text-align: left">Entities</h2>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">country</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">world_region</th>
+                        <th class="tg-9hbo">latitude</th>
+                        <th class="tg-9hbo">longitude</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">Sweden</td>
+                        <td class="tg-b7b8">europe</td>
+                        <td class="tg-b7b8">385</td>
+                        <td class="tg-b7b8">85</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">sgp</td>
+                        <td class="tg-yw4l">Singapore</td>
+                        <td class="tg-yw4l">asia</td>
+                        <td class="tg-yw4l">583</td>
+                        <td class="tg-yw4l">75</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">sth</td>
+                        <td class="tg-b7b8">Stockholm</td>
+                        <td class="tg-b7b8">europe</td>
+                        <td class="tg-b7b8">484</td>
+                        <td class="tg-b7b8">84</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                      </tr>
+                    </table>
+                    <br><br>
+
+                    <h2 style="text-align: left">Datapoints</h2>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">country</th>
+                        <th class="tg-y2tu">year</th>
+                        <th class="tg-9hbo">population</th>
+                        <th class="tg-9hbo">gdp_per_capita</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">2015</td>
+                        <td class="tg-b7b8">385</td>
+                        <td class="tg-b7b8">3858575</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">usa</td>
+                        <td class="tg-yw4l">2015</td>
+                        <td class="tg-yw4l">583</td>
+                        <td class="tg-yw4l">385839</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">ger</td>
+                        <td class="tg-b7b8">2015</td>
+                        <td class="tg-b7b8">484</td>
+                        <td class="tg-b7b8">5894</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">swe</td>
+                        <td class="tg-yw4l">2014</td>
+                        <td class="tg-yw4l">200</td>
+                        <td class="tg-yw4l">4839595</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                      </tr>
+                    </table>
+                </div>
+                <div class="tables">
+                    <img src="assets/entity_set.svg"></div>
+                </div>
+                <h2>Entity sets: one entity, multiple sets</h2></section>
+
+                <section>
+                <div class="demospace">
+                <div class="tables">
+                    <iframe style="width: 100%; height: 100%;" src="http://static.gapminderdev.org/preview/develop/bubblechart.html#_width:1080&height:707&fullscreen:false&resp-sect:true&butt-sect:true&info-sect:true"></iframe>
+                </div>
+                <div class="tables">
+                    <img src="assets/entity_set.svg"></div>
+                </div>
+                <h2>Entity sets: one entity, multiple sets</h2></section>
+
+ 
+                <section><h1>Multi-dimensionality</h1></section>
+                <section>
+                <div class="demospace">
+                    <div class="tables">
+                    <h2 style="text-align: left">Datapoints</h2>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">country</th>
+                        <th class="tg-y2tu">year</th>
+                        <th class="tg-9hbo">population</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">2015</td>
+                        <td class="tg-b7b8">385</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">usa</td>
+                        <td class="tg-yw4l">2015</td>
+                        <td class="tg-yw4l">583</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">2014</td>
+                        <td class="tg-b7b8">200</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                      </tr>
+                    </table>
+                    <br><br>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">country</th>
+                        <th class="tg-y2tu">year</th>
+                        <th class="tg-y2tu">age</th>
+                        <th class="tg-9hbo">population</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">2015</td>
+                        <td class="tg-b7b8">0</td>
+                        <td class="tg-b7b8">200</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">swe</td>
+                        <td class="tg-yw4l">2015</td>
+                        <td class="tg-yw4l">1</td>
+                        <td class="tg-yw4l">185</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                      </tr>
+                    </table>
+                    <br><br>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">country</th>
+                        <th class="tg-y2tu">year</th>
+                        <th class="tg-y2tu">age</th>
+                        <th class="tg-y2tu">gender</th>
+                        <th class="tg-9hbo">population</th>
+                      </tr>
+                    </table>
+                    <br><br>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">country</th>
+                        <th class="tg-y2tu">year</th>
+                        <th class="tg-y2tu">gender</th>
+                        <th class="tg-y2tu">age</th>
+                        <th class="tg-y2tu">educ</th>
+                        <th class="tg-9hbo">population</th>
+                      </tr>
+                    </table>
+                    </div>
+
+                    <div class="tables fragment">
+                        <iframe style="height: 100%; width: 100%;" src="http://static.gapminderdev.org/preview/master/popbyage.html#_width:858&height:780&fullscreen:false&bodyC:null&resp-sect:true&butt-sect:true&info-sect:true&model_state_marker/_allpossible_color_scaleType=ordinal"></iframe>
+                    </div>
+                </div>
+
+                <h2>Multi-dimensionality</h2></section>
+                <section><h1>Translations</h1></section>
+                <section>
+
+                <div class="demospace">
+                <div class="tables">
+
+                    <h2 style="text-align: left">Concepts</h2>
+                    <small>/ddf--concepts.csv</small>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">concept</th>
+                        <th class="tg-9hbo">scales</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">description</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">country</td>
+                        <td class="tg-b7b8"></td>
+                        <td class="tg-b7b8">Country</td>
+                        <td class="tg-b7b8"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">year</td>
+                        <td class="tg-yw4l">["time"]</td>
+                        <td class="tg-yw4l">Year</td>
+                        <td class="tg-yw4l">Calendar year</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">life_expectancy</td>
+                        <td class="tg-b7b8">["linear"]</td>
+                        <td class="tg-b7b8">Life expectancy</td>
+                        <td class="tg-b7b8">Expected length of life ...</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">gdp_per_capita</td>
+                        <td class="tg-yw4l">["log","linear"]</td>
+                        <td class="tg-yw4l">Income per person</td>
+                        <td class="tg-yw4l">Gross Domestic Product per ...</td>
+                      </tr>
+                    </table><br><br>
+
+                    <h2 style="text-align: left">Entities</h2>
+                    <small>/ddf--entities--geo.csv</small>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">geo</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">long_name</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">Sweden</td>
+                        <td class="tg-b7b8">The Kingdom of Sweden</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">ger</td>
+                        <td class="tg-yw4l">Germany</td>
+                        <td class="tg-yw4l">Federal Republic of Germany</td>
+                      </tr>
+                    </table>
+                </div>
+                <div class="tables">
+
+                    <h2 style="text-align: left">Concepts</h2>
+                    <small>/lang/nl-nl/ddf--concepts.csv</small>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">concept</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">description</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">country</td>
+                        <td class="tg-b7b8">Land</td>
+                        <td class="tg-b7b8"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">year</td>
+                        <td class="tg-yw4l">Jaar</td>
+                        <td class="tg-yw4l">Kalenderjaar</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">life_expectancy</td>
+                        <td class="tg-b7b8">Levensverwachting</td>
+                        <td class="tg-b7b8">Verwachte lengte van het leven ...</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">gdp_per_capita</td>
+                        <td class="tg-yw4l">Inkomen per persoon</td>
+                        <td class="tg-yw4l">Bruto nationaal product per persoon ...</td>
+                      </tr>
+                    </table><br><br>
+
+                    <h2 style="text-align: left">Entities</h2>
+                    <small>/lang/nl-nl/ddf--entities--geo.csv</small>
+                    <table class="tg">
+                    <tr>
+                        <th class="tg-y2tu">geo</th>
+                        <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">long_name</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">Zweden</td>
+                        <td class="tg-b7b8">Het Zweedse Koninkrijk</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">ger</td>
+                        <td class="tg-yw4l">Duitsland</td>
+                        <td class="tg-yw4l">Bondsrepubliek Duitsland</td>
+                      </tr>
+                    </table>
+                </div>
+                </div>
+
+                <h2><a href="http://www.gapminder.org/tools/" target="_blank">Each string concept can have translations</a></h2></section>
+                <section><h1>DDF is format agnostic</h1></section>
                 <section><h1><img src="assets/opennumbers.png" width="210">Open Numbers</h1>Crowd-sourced harmonization of global & local statistics</section>
             </div>
         </div>

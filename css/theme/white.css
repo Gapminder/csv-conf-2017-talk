@@ -19,7 +19,15 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   height: 900px;
   width: 850px;
   vertical-align: top;
-
+  text-align: left;
+}
+#basic_ddf .tables table.tg,
+#basic_ddf .tables table.tg tr {
+  width: 800px;
+}
+#basic_ddf .tables table.tg td,
+#basic_ddf .tables table.tg th {
+  font-size: 18px;
 }
 .reveal .demospace h5 {
   margin-top: 1em;
