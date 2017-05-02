@@ -21,15 +21,13 @@
     var ddfReader = new DDFCsvReader.getDDFCsvReaderObject()
     Vizabi.Reader.extend("ddf", ddfReader);
 
-    ConfigBubbleChart = {
-    }
     ConfigBubbleChart.locale = {
       "id": "en",
       "filePath": "assets/translation/"
     };
     ConfigBubbleChart.data = {
       "reader": "ddf",
-      "path": "data/ddf--bubbles-2"
+      "path": "data/presentation_set"
     };
 
     var viz = Vizabi("BubbleChart", document.getElementById("placeholder"), ConfigBubbleChart);
