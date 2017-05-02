@@ -51,7 +51,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   display: inline-block;
 }
 .reveal table.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc; margin: 0; display: inline-block; width: 850px;  z-index: 100; vertical-align: top; }
-.reveal table.tg td{font-family:Arial, sans-serif;font-size:25px;padding:10px 25px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.reveal table.tg td{font-family:Arial, sans-serif;font-size:25px;padding:10px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
 .reveal table.tg th{font-family:Arial, sans-serif;font-size:25px;font-weight:normal;padding:10px 25px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
 .reveal table.tg .tg-y2tu{font-weight:bold;text-decoration:underline;vertical-align:top}
 .reveal table.tg .tg-9hbo{font-weight:bold;vertical-align:top}
