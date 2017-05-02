@@ -104,6 +104,27 @@
             }
         },
         {
+            "path": "ddf--datapoints--co2_pcap--by--geo--time.csv",
+            "name": "ddf--datapoints--co2_pcap--by--geo--time",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "geo"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "co2_pcap"
+                    }
+                ],
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ]
+            }
+        },
+        {
             "path": "ddf--datapoints--population--by--geo--time.csv",
             "name": "ddf--datapoints--population--by--geo--time",
             "schema": {

@@ -61,34 +61,67 @@
                       <tr>
                         <td class="tg-b7b8">swe</td>
                         <td class="tg-b7b8">2015</td>
-                        <td class="tg-b7b8">385</td>
-                        <td class="tg-b7b8">85</td>
-                        <td class="tg-b7b8">3858575</td>
+                        <td class="tg-b7b8">9.78M</td>
+                        <td class="tg-b7b8">82.1</td>
+                        <td class="tg-b7b8">44.9k</td>
                       </tr>
                       <tr>
                         <td class="tg-yw4l">usa</td>
                         <td class="tg-yw4l">2015</td>
-                        <td class="tg-yw4l">583</td>
-                        <td class="tg-yw4l">75</td>
-                        <td class="tg-yw4l">385839</td>
+                        <td class="tg-yw4l">322M</td>
+                        <td class="tg-yw4l">79.1</td>
+                        <td class="tg-yw4l">53.4k</td>
                       </tr>
                       <tr>
                         <td class="tg-b7b8">ger</td>
                         <td class="tg-b7b8">2015</td>
-                        <td class="tg-b7b8">484</td>
-                        <td class="tg-b7b8">84</td>
-                        <td class="tg-b7b8">5894</td>
+                        <td class="tg-b7b8">80.7M</td>
+                        <td class="tg-b7b8">80.8</td>
+                        <td class="tg-b7b8">44.1k</td>
                       </tr>
                       <tr>
                         <td class="tg-yw4l">swe</td>
                         <td class="tg-yw4l">2014</td>
-                        <td class="tg-yw4l">200</td>
-                        <td class="tg-yw4l">85</td>
-                        <td class="tg-yw4l">4839595</td>
+                        <td class="tg-yw4l">9.7M</td>
+                        <td class="tg-yw4l">82.1</td>
+                        <td class="tg-yw4l">44k</td>
                       </tr>
                       <tr>
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                        <td class="tg-b7b8">...</td>
+                      </tr>
+                    </table><br><br>
+
+                    <table class="tg fragment">
+                    <tr>
+                        <th class="tg-y2tu">country</th>
+                        <th class="tg-y2tu">year</th>
+                        <th class="tg-9hbo">co2_emission</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">swe</td>
+                        <td class="tg-b7b8">2013</td>
+                        <td class="tg-b7b8">4.61</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">usa</td>
+                        <td class="tg-yw4l">2013</td>
+                        <td class="tg-yw4l">16.4</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-b7b8">ger</td>
+                        <td class="tg-b7b8">2013</td>
+                        <td class="tg-b7b8">9.4</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">swe</td>
+                        <td class="tg-yw4l">2012</td>
+                        <td class="tg-yw4l">4.93</td>
+                      </tr>
+                      <tr>
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
@@ -172,6 +205,11 @@
                  <div id="vizabi_entities" class="vizabi"></div>
                 </div>
                 </section>
+
+                <section>
+                    <iframe style="width: 100%; height: 900px;" src="http://127.0.0.1:3858/slides/wdf-lex.html"></iframe>
+                </section>
+
                 <section>
 
                 <div class="demospace">
@@ -665,6 +703,10 @@
                 </div>
 
                 <h2>Multi-dimensionality</h2></section>
+
+                <section>
+                    <iframe style="width: 100%; height: 900px;" src="demo-06-migration.html"></iframe>
+                </section>
                 <section><h1>Translations</h1></section>
                 <section>
 
@@ -848,11 +890,23 @@
             var ddfcsvReader = new DDFCsvReader.getDDFCsvReaderObject()
             Vizabi.Reader.extend("ddf", ddfcsvReader);
 
+
+            var dpstate = Vizabi.utils.deepClone(gap_sg_state);
+            dpstate.marker.axis_x.scaleType = 'linear';
+            dpstate.marker.axis_x.which = 'gdp_per_capita';
+            dpstate.marker.axis_y.which = 'life_expectancy';
+            dpstate.marker.size.which = 'population';
+            dpstate.marker_colorlegend.hook_geoshape.which = 'foo';
+            dpstate.marker.color.use = 'constant';
+            dpstate.marker.color.which = '_default';
+            dpstate.marker.label.which = 'geo';
+            dpstate.marker_colorlegend.label.which = 'geo';
             Vizabi('BubbleChart', document.getElementById('vizabi'),{
                 data: {
-                  reader: "csv",
-                  path: "data/basic_bubble.csv"
+                  reader: "ddf",
+                  path: "data/presentation_set"
                 },
+                state: dpstate,
                 ui: { presentation: true }
             });
             
@@ -934,6 +988,22 @@
                     })
                 }
             });
+
+            //this function is called by internal iframes
+            function keyCode(event) {
+                if (event.srcElement.nodeName === "INPUT") return;
+                switch (event.which || event.keyCode) {
+                  case 32:
+                    handleKeyPress(event);
+                    break; //space
+                  case 39:
+                    Reveal.next();
+                    break; //arrow-right
+                  case 37:
+                    Reveal.prev();
+                    break; //arrow-left
+                }
+            };
         </script>
     </body>
 </html>
