@@ -42,6 +42,30 @@
                 ],
                 "primaryKey": "country"
             }
+        },
+        {
+	    "path": "ddf--datapoints.csv",
+	    "name": "ddf--datapoints",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "time"
+                    },
+                    {
+                        "name": "life_expectancy"
+                    },
+                    {
+                        "name": "gdp_per_capita"
+                    },
+                    {
+                        "name": "population"
+                    }
+                ],
+                "primaryKey": ["country", "time"]
+            }
         }
     ]
 }

@@ -1,10 +1,10 @@
 concept,concept_type
+country,entity_domain
+world_4region,string
+time,time
 life_expectancy,measure
 gdp_per_capita,measure
 population,measure
-country,entity_domain
-time,time
 name,string
-world_4region,entity_set
 latitude,measure
 longitude,measure
