@@ -563,9 +563,9 @@
 
                 <section>
                 <div class="demospace">
-                <div class="tables">
+                <!--div class="tables">
                     <iframe style="width: 100%; height: 100%;" src="http://static.gapminderdev.org/preview/develop/bubblechart.html#_width:1080&height:707&fullscreen:false&resp-sect:true&butt-sect:true&info-sect:true"></iframe>
-                </div>
+                </div-->
                 <div class="tables">
                     <img src="assets/entity_set.svg"></div>
                 </div>
@@ -778,6 +778,15 @@
                 </div>
 
                 <h2><a href="http://www.gapminder.org/tools/" target="_blank">Each string concept can have translations</a></h2></section>
+                  
+                <section>
+                  <div id="translations" style="width:100%; height:900px;"></div>
+                  <p> 
+                    <a style="cursor: pointer; color: blue; text-decoration: underline" onclick="setLocale('ar-SA')">Arabic</a> 
+                    <a style="cursor: pointer; color: blue; text-decoration: underline" onclick="setLocale('en')">English</a>
+                  </p>
+                </section>
+                  
                 <section><h1>DDF is format agnostic</h1></section>
                 <section><h1>Data Pipeline</h1></section>
                 <section><h1>Data kitchen example</h1></section>
@@ -805,6 +814,7 @@
         <script src="lib/vizabi/gap_sg_state.js"></script>
         <script src="lib/vizabi/popbyage.js"></script>
         <script src="lib/vizabi/ConfigPopByAge.js"></script>
+        <script src="lib/vizabi/ConfigBubbleChart.js"></script>
 
         <script>
 
@@ -851,6 +861,14 @@
               , path: 'data/ddf--gapminder--population'
             };
             var viz = Vizabi("PopByAge", document.getElementById("multidimensionality"), ConfigPopByAge);
+
+            ConfigBubbleChart.locale = {"id": "en", "filePath": "assets/translation/"};
+            ConfigBubbleChart.data = {"reader": "ddf", "path": "data/presentation_set/"};
+            var vizabiTranslationDemo = Vizabi("BubbleChart", document.getElementById("translations"), ConfigBubbleChart);
+            function setLocale(arg) {vizabiTranslationDemo.model.locale.id = arg;}
+
+          
+  
 
             // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
