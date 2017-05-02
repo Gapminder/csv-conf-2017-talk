@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>reveal.js</title>
+        <title>Gapminder - csv,conf,v3 DDF slides</title>
 
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/white.css">
@@ -127,11 +127,11 @@
                         <td class="tg-b7b8">84</td>
                       </tr>
                       <tr>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
                       </tr>
                     </table><br><br>
                     <table class="tg fragment" id="region_entities">
@@ -156,8 +156,8 @@
                         <td class="tg-b7b8">{ ... }</td>
                       </tr>
                       <tr>
-                        <td class="tg-b7b8">africa</td>
-                        <td class="tg-b7b8">Africa</td>
+                        <td class="tg-yw4l">africa</td>
+                        <td class="tg-yw4l">Africa</td>
                         <td class="tg-yw4l">{ ... }</td>
                       </tr>
                     </table>
@@ -338,11 +338,11 @@
                         <td class="tg-b7b8">84</td>
                       </tr>
                       <tr>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
-                        <td class="tg-b7b8">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
+                        <td class="tg-yw4l">...</td>
                       </tr>
                     </table><br><br>
                     <table class="tg" id="region_entities">
@@ -367,8 +367,8 @@
                         <td class="tg-b7b8">{ ... }</td>
                       </tr>
                       <tr>
-                        <td class="tg-b7b8">africa</td>
-                        <td class="tg-b7b8">Africa</td>
+                        <td class="tg-yw4l">africa</td>
+                        <td class="tg-yw4l">Africa</td>
                         <td class="tg-yw4l">{ ... }</td>
                       </tr>
                     </table>
@@ -559,7 +559,9 @@
                 <section>
                 <div class="demospace">
                 <div class="tables">
+                
                     <iframe style="width: 100%; height: 100%;" src="http://static.gapminderdev.org/preview/develop/bubblechart.html#_width:1080&height:707&fullscreen:false&resp-sect:true&butt-sect:true&info-sect:true"></iframe>
+                    
                 </div>
                 <div class="tables">
                     <img src="assets/entity_set.svg"></div>
@@ -650,7 +652,9 @@
                     </div>
 
                     <div class="tables fragment">
+                    
                         <iframe style="height: 100%; width: 100%;" src="http://static.gapminderdev.org/preview/master/popbyage.html#_width:858&height:780&fullscreen:false&bodyC:null&resp-sect:true&butt-sect:true&info-sect:true&model_state_marker/_allpossible_color_scaleType=ordinal"></iframe>
+                        
                     </div>
                 </div>
 
@@ -773,17 +777,45 @@
                 <h2><a href="http://www.gapminder.org/tools/" target="_blank">Each string concept can have translations</a></h2></section>
                 <section><h1>DDF is format agnostic</h1></section>
                 <section><h1>Data Pipeline</h1></section>
-                <section><h1>Data kitchen example</h1></section>
-                <section><h1>Recipe code</h1></section>
-                <section><h1>Recipe diagram</h1></section>
+                <section><div class="demospace" style="position: relative; height: 800px;"><img src="assets/datapipeline.png" style="position: absolute; top:50%; transform: translate(-50%,-50%);"></div><h2>Data Pipeline</h2></section>
+                <section><div class="demospace" style="position: relative; height: 800px;"><img src="assets/data kitchen example.svg" style="position: absolute; top:50%; transform: translate(-50%,-50%); height: 600px;"></div><h4>Data Pipeline</h4><h2>Data kitchen example</h2></section>
+                <section>
+        <pre><code>
+    ingredients:
+        - id: cdiac-entities
+          dataset: ddf--cdiac--co2
+          key: nation
+          value: "*"
+        - id: gapminder-entities
+          dataset: ddf--gapminder--geo_entity_domain
+          key: country
+          value: "*"
+
+    cooking:
+        datapoints:
+            - procedure: translate_column
+              ingredients:
+                  - cdiac-entities
+              options:
+                  column: name
+                  target_column: geo
+                  dictionary:
+                      key: ['name', 'gapminder_list','alternative_1', 'alternative_2', 'alternative_3',
+                            'alternative_4_cdiac', 'pandg', 'god_id', 'alt_5', 'upper_case_name', 'arb1', 
+                            'arb2', 'arb3', 'arb4', 'arb5', 'arb6'] 
+                      value: country
+                      base: gapminder-entities
+                  not_found: drop
+                  ignore_case: true
+                  debug: true
+              result: geo-entities-translated
+        </code></pre>
+        <h4>Data Pipeline</h4>
+                <h2>Recipe code example</h2></section>
+                <section><img src="assets/co2 recipe.svg" height="800"><h4>Data Pipeline</h4><h2>Recipe diagram</h2></section>
 
                 <section><h1><img src="assets/opennumbers.png" width="210">Open Numbers</h1>Crowd-sourced harmonization of global & local statistics</section>
-                <section><h1>Work with us!</h1>
-                <ul>
-                <li>http://open-numbers.github.io</li>
-                <li>http://vizabi.org</li>
-                </ul>
-
+                <section><h1>Let's build a fact base together!</h1><br><img src="assets/sites.png"></section>
                 </section>
             </div>
         </div>
@@ -806,6 +838,7 @@
                 data: {
                     path: 'data/basic_bubble.csv'
                 },
+                ui: { presentation: true }
             });
             
             var entpropstate = Vizabi.utils.deepClone(gap_sg_state);
@@ -820,7 +853,8 @@
                     path: 'data/presentation_set/',
                     reader: 'ddf'
                 },
-                state: entpropstate
+                state: entpropstate,
+                ui: { presentation: true }
             })
 
             Vizabi('BubbleChart', document.getElementById('vizabi_concepts'),{
@@ -828,7 +862,8 @@
                     path: 'data/presentation_set/',
                     reader: 'ddf'
                 },
-                state: gap_sg_state
+                state: gap_sg_state,
+                ui: { presentation: true }
             })
 
             // More info https://github.com/hakimel/reveal.js#configuration

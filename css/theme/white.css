@@ -59,6 +59,13 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal table.tg .tg-yw4l{vertical-align:top}
 
 
+.reveal section pre code {
+  max-height: 900px;
+}
+.reveal section pre {
+  box-shadow: none;
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
