@@ -1,10 +1,10 @@
-concept,concept_type,name,description
-life_expectancy,measure,Life Expectancy,Life Expectancy in years
-gdp_per_capita,measure,GDP/capita,GDP per capita in exchange rate terms and adjusted for inflation (2000 US$)
-population,measure,Population,Total population
-country,entity_domain,Country,
-time,time,Time,
-name,string,Name,
-world_4region,entity_set,World Regions,
-latitude,measure,Latitude,
-longitude,measure,Longitude,
+concept,concept_type
+country,entity_domain
+world_4region,string
+time,time
+life_expectancy,measure
+gdp_per_capita,measure
+population,measure
+name,string
+latitude,measure
+longitude,measure
