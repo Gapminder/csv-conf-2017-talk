@@ -2,8 +2,8 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
-  <script src="../lib/d3.v3.min.js"></script>
-  <link rel="stylesheet" href="../lib/migration-map.css">
+  <script src="./lib/d3.v3.min.js"></script>
+  <link rel="stylesheet" href="./lib/migration-map.css">
 </head>
 
 <body onkeyup="parent.keyCode(event)"></body>
@@ -12,10 +12,10 @@
 <script>
 //SETTINGS
 //specify data file
-var DATA_FILE = "../data/ddf--datapoints--flow--by--province_from--province_to--gender--popgroup--agegroup.csv";
-var PROPERTY_FILE = "../data/ddf--datapoints--flow-geo-proprties.csv";  
+var DATA_FILE = "./data/ddf--datapoints--flow--by--province_from--province_to--gender--popgroup--agegroup.csv";
+var PROPERTY_FILE = "./data/ddf--datapoints--flow-geo-proprties.csv";  
 //specify where the map is  
-var MAP_FILE = "../data/municipalities-blowup.svg";
+var MAP_FILE = "./data/municipalities-blowup.svg";
 //specify how data column "from" looks like
 var FROM = "Province from";
 //specify how data column "to" looks like
@@ -107,5 +107,5 @@ var dataReadyCallback = function(callback){
   
 </script>
 
-<script src="../lib/migration-map.js"></script>
+<script src="./lib/migration-map.js"></script>
 </html>

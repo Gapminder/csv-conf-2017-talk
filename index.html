@@ -183,7 +183,7 @@
                     <tr>
                         <th class="tg-y2tu">world_region</th>
                         <th class="tg-9hbo">name</th>
-                        <th class="tg-9hbo">topojson</th>
+                        <th class="tg-9hbo">shape</th>
                       </tr>
                       <tr>
                         <td class="tg-b7b8">americas</td>
@@ -214,7 +214,7 @@
                 </section>
 
                 <section>
-                    <iframe style="width: 100%; height: 900px;" src="http://127.0.0.1:3858/slides/wdf-lex.html"></iframe>
+                    <iframe src="//www.gapminder.org/tools/?embedded=true#$ui$dialogs$find$enableMarkerSpaceOptions:true&enableSelectShowSwitch:true;;&chart$opacitySelectDim:0.36;&tree-menu$showDataSources:true;;&model$markers$bubble$data$space@=level&=year;;&encoding$x$scale$domain:null&type=log&zoomed@:523.94&:132037.37;;&data$concept=gnic;;&y$scale$domain:null&type:null&zoomed@:43.87&:85.41;;&data$concept=lifexp;;&size$scale$domain:null&type:null&zoomed:null;&data$concept=pop;;&color$scale$domain:null&type:null&zoomed:null;&data$concept=national&space@=level;;;&label$data$concept=name;;&frame$value=2019&data$concept=year;;&trail$show:false;;;;&dataSources$country_flags$path=https:////raw.githubusercontent.com//open-numbers//ddf--gdl--shdi//master//&modelType=ddfcsv;;;&chart-type=bubbles&url=v1" style="width: 100%; height: 100vh; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
                 </section>
 
                 <section>
@@ -227,6 +227,7 @@
                         <th class="tg-y2tu">concept</th>
                         <th class="tg-9hbo">scales</th>
                         <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">unit</th>
                         <th class="tg-9hbo">description</th>
                       </tr>
                       <tr>
@@ -234,26 +235,31 @@
                         <td class="tg-b7b8"></td>
                         <td class="tg-b7b8">Country</td>
                         <td class="tg-b7b8"></td>
+                        <td class="tg-b7b8"></td>
                       </tr>
                       <tr>
                         <td class="tg-yw4l">year</td>
                         <td class="tg-yw4l">["time"]</td>
                         <td class="tg-yw4l">Year</td>
+                        <td class="tg-yw4l"></td>
                         <td class="tg-yw4l">Calendar year</td>
                       </tr>
                       <tr>
                         <td class="tg-b7b8">life_expectancy</td>
                         <td class="tg-b7b8">["linear"]</td>
                         <td class="tg-b7b8">Life expectancy</td>
-                        <td class="tg-b7b8">Expected length of life ...</td>
+                        <td class="tg-b7b8">years</td>
+                        <td class="tg-b7b8">The average number of years a newborn child would live...</td>
                       </tr>
                       <tr>
                         <td class="tg-yw4l">gdp_per_capita</td>
                         <td class="tg-yw4l">["log","linear"]</td>
                         <td class="tg-yw4l">Income per person</td>
+                        <td class="tg-yw4l">GDP/capita in $/year adjusted for inflation & prices</td>
                         <td class="tg-yw4l">Gross Domestic Product per person ...</td>
                       </tr>
                       <tr>
+                        <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
@@ -322,6 +328,7 @@
                         <th class="tg-y2tu">concept</th>
                         <th class="tg-9hbo">scales</th>
                         <th class="tg-9hbo">name</th>
+                        <th class="tg-9hbo">unit</th>
                         <th class="tg-9hbo">description</th>
                       </tr>
                       <tr>
@@ -329,26 +336,31 @@
                         <td class="tg-b7b8"></td>
                         <td class="tg-b7b8">Country</td>
                         <td class="tg-b7b8"></td>
+                        <td class="tg-b7b8"></td>
                       </tr>
                       <tr>
                         <td class="tg-yw4l">year</td>
                         <td class="tg-yw4l">["time"]</td>
                         <td class="tg-yw4l">Year</td>
+                        <td class="tg-yw4l"></td>
                         <td class="tg-yw4l">Calendar year</td>
                       </tr>
                       <tr>
                         <td class="tg-b7b8">life_expectancy</td>
                         <td class="tg-b7b8">["linear"]</td>
                         <td class="tg-b7b8">Life expectancy</td>
-                        <td class="tg-b7b8">Expected length<br> of life ...</td>
+                        <td class="tg-b7b8">years</td>
+                        <td class="tg-b7b8">The average number of years a newborn child would live...</td>
                       </tr>
                       <tr>
                         <td class="tg-yw4l">gdp_per_capita</td>
                         <td class="tg-yw4l">["log","linear"]</td>
                         <td class="tg-yw4l">Income per person</td>
-                        <td class="tg-yw4l">Gross Domestic<br>Product per person ...</td>
+                        <td class="tg-yw4l">GDP/capita in $/year adjusted for inflation & prices</td>
+                        <td class="tg-yw4l">Gross Domestic Product per person ...</td>
                       </tr>
                       <tr>
+                        <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
                         <td class="tg-b7b8">...</td>
@@ -399,7 +411,7 @@
                     <tr>
                         <th class="tg-y2tu">world_region</th>
                         <th class="tg-9hbo">name</th>
-                        <th class="tg-9hbo">topojson</th>
+                        <th class="tg-9hbo">shape</th>
                       </tr>
                       <tr>
                         <td class="tg-b7b8">americas</td>
@@ -609,9 +621,20 @@
                 <section>
                 <div class="demospace">
                 <div class="tables">
-
-                    <iframe style="width: 100%; height: 100%;" src="demo-01-bubbles.html"></iframe>
-
+                  <table height=100% width=100% style="margin: unset">
+                    <tr>
+                      <th height=30px style="border-bottom:none">UN states</th>
+                      <th height=30px style="border-bottom:none">Countries</th>
+                    </tr>
+                    <tr>
+                      <td style="border-bottom:none">
+                        <iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$encoding$y$scale$zoomed@:68.57&:88.35;;;&x$scale$zoomed@:20042.66&:115472.44;;;;;;;&chart-type=bubbles&url=v1" style="width: 100%; height: 100%; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
+                      </td>
+                      <td style="border-bottom:none">
+                        <iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$bubble$data$filter$dimensions:null;;&encoding$y$scale$zoomed@:68.57&:88.35;;;&x$scale$zoomed@:20042.66&:115472.44;;;;;;;&chart-type=bubbles&url=v1" style="width: 100%; height: 100%; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
+                      </td>
+                    </tr>
+                  </table>                    
                 </div>
                 <div class="tables">
                     <img src="assets/entity_set.svg"></div>
@@ -703,7 +726,7 @@
 
                     <div class="tables fragment">
           
-                      <iframe style="width: 100%; height: 100%;" src="demo-05-popbyage.html"></iframe>
+                      <iframe src="https://www.gapminder.org/tools/?embedded=true#$ui$chart$inpercent:true;;&model$markers$pyramid$data$filter$dimensions$geo$geo$/$in@=swe&=usa;;;;;;&encoding$frame$value=2014;;;;;&chart-type=popbyage&url=v1" style="width: 100%; height: 100%; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
 
                     </div>
                   
