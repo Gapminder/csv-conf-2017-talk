@@ -1,3 +1,6 @@
+# live
+[http://static.gapminderdev.org/csv-conf-2017-talk/#](http://static.gapminderdev.org/csv-conf-2017-talk/#/)
+
 # usage
 No need to install dependencies! just run the repo with a web server `npm start`.  
 Everything is included as static files.   
